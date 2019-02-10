@@ -13,3 +13,12 @@ sudo curl -o configure-install-php -L https://raw.githubusercontent.com/ijoaosou
 sudo sh configure-install-php
 sudo make
 sudo make install
+cd /opt/php-fpm-7.2.15/etc
+sudo curl -o php-fpm.conf -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/php-fpm.conf
+sudo curl -o php.ini -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/php.ini
+cd /opt/php-fpm-7.2.15/etc/php-fpm.d
+sudo curl -o www.conf -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/www.conf
+cd /usr/lib/systemd/system/
+sudo curl -o php-fpm-7.2.15.service -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/php-fpm-7.2.15.service
+sudo systemctl start php-fpm-7.2.15.service
+sudo systemctl enable php-fpm-7.2.15.service

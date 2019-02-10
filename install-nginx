@@ -27,5 +27,5 @@ sudo openssl rand 48 > /etc/nginx/ssl/ticket.key
 sudo curl -o /etc/nginx/ssl/lets-encrypt-x3-cross-signed.pem -L https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt
 cd /etc/nginx
 sudo wget https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/nginx.zip
-rm -rf nginx.conf
+sudo rm -rf nginx.conf
 sudo unzip nginx.zip

@@ -1,6 +1,7 @@
-yum install -y bzip2-devel
-yum install -y libwebp-devel
-yum install -y libcurl-devel
+sudo yum install -y bzip2-devel
+sudo yum install -y libwebp-devel
+sudo yum install -y libcurl-devel
+sudo yum install -y libicu-devel
 cd /compile
 sudo wget http://php.net/distributions/php-7.2.15.tar.gz
 sudo tar -vzxf php-7.2.15.tar.gz

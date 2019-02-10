@@ -1,5 +1,6 @@
 sudo yum check-update || sudo yum update -y
-sudo yum groupinstall -y 'Development Tools' && sudo yum install -y nano
+sudo yum groupinstall -y 'Development Tools'
+sudo yum install -y nano
 sudo yum install -y epel-release
 sudo yum install -y perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel gd gd-devel GeoIP GeoIP-devel
 sudo yum install -y pcre-devel

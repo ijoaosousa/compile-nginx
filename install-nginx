@@ -37,3 +37,5 @@ cd /usr/lib/systemd/system/
 sudo curl -o nginx.service -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/nginx.service
 sudo systemctl start nginx.service
 sudo systemctl enable nginx.service
+cd /root
+sudo git clone https://github.com/certbot/certbot.git

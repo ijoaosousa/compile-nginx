@@ -1,9 +1,20 @@
-yum install -y curl
-mkdir -p /compile
+sudo yum install -y curl
+sudo mkdir -p /compile
 cd /compile
-git clone https://github.com/grahamedgecombe/ct-submit.git && git clone https://github.com/nginx/nginx.git && git clone https://github.com/grahamedgecombe/nginx-ct.git && git clone https://github.com/google/ngx_brotli.git && git clone https://github.com/openssl/openssl.git && wget https://ftp.pcre.org/pub/pcre/pcre-8.42.zip && unzip pcre-8.42.zip && rm -rf pcre-8.42.zip && git clone https://github.com/kyprizel/testcookie-nginx-module.git && wget https://www.zlib.net/zlib-1.2.11.tar.gz && tar -vzxf zlib-1.2.11.tar.gz && rm -rf zlib-1.2.11.tar.gz
+sudo git clone https://github.com/grahamedgecombe/ct-submit.git
+sudo git clone https://github.com/nginx/nginx.git
+sudo git clone https://github.com/grahamedgecombe/nginx-ct.git
+sudo git clone https://github.com/google/ngx_brotli.git
+sudo git clone https://github.com/openssl/openssl.git
+sudo git clone https://github.com/kyprizel/testcookie-nginx-module.git
+wget https://ftp.pcre.org/pub/pcre/pcre-8.42.zip
+sudo unzip pcre-8.42.zip
+sudo rm -rf pcre-8.42.zip
+sudo wget https://www.zlib.net/zlib-1.2.11.tar.gz
+sudo tar -vzxf zlib-1.2.11.tar.gz
+sudo rm -rf zlib-1.2.11.tar.gz
 cd /compile/nginx
-curl -o configure-install-nginx -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/configure-install-nginx
-sh configure-install-nginx
-make
-make install
+sudo curl -o configure-install-nginx -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/configure-install-nginx
+sudo sh configure-install-nginx
+mudo make
+sudo make install

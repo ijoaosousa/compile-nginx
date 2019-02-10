@@ -1,4 +1,3 @@
-sudo mkdir -p /compile
 cd /compile
 sudo wget http://php.net/distributions/php-7.2.15.tar.gz
 sudo tar -vzxf php-7.2.15.tar.gz

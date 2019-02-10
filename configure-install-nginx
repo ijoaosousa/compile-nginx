@@ -50,8 +50,8 @@
             --with-zlib=/compile/zlib-1.2.11 \
             --with-pcre=/compile/pcre-8.42 \
             --with-openssl=/compile/openssl \
-			      --add-module=/compile/testcookie-nginx-module \
-		      	--add-module=/compile/nginx-ct \
-			      --add-module=/compile/ngx_brotli \
+	    --add-module=/compile/testcookie-nginx-module \
+	    --add-module=/compile/nginx-ct \
+	    --add-module=/compile/ngx_brotli \
             --with-openssl-opt=no-nextprotoneg \
             --with-debug

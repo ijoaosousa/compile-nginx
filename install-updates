@@ -5,6 +5,11 @@ sudo yum install -y perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel li
 sudo yum install -y pcre-devel
 sudo yum install -y openssl-devel
 sudo yum install -y git
+sudo rm -rf /etc/sysctl.conf
+sudo curl -o /etc/sysctl.conf -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/sysctl.conf
+sudo rm -rf /etc/security/limits.d/20-nproc.conf
+sudo curl -o /etc/security/limits.d/20-nproc.conf -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/20-nproc.conf
+sudo sysctl -p
 sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 sudo yum --enablerepo=elrepo-kernel -y install kernel-ml

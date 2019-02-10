@@ -1,0 +1,12 @@
+sudo mkdir -p /compile
+cd /compile
+sudo wget http://php.net/distributions/php-7.2.15.tar.gz
+sudo tar -vzxf php-7.2.15.tar.gz
+sudo rm -rf php-7.2.15.tar.gz
+sudo mv php-7.2.15 php-fpm-7.2.15
+sudo mkdir -p /opt/php-fpm-7.2.15
+cd php-fpm-7.2.15
+sudo curl -o configure-install-php -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/configure-install-php
+sudo sh configure-install-php
+sudo make
+sudo make install

@@ -1,0 +1,13 @@
+sudo yum check-update || sudo yum update -y
+sudo yum groupinstall -y 'Development Tools' && sudo yum install -y nano
+sudo yum install -y epel-release
+sudo yum install -y perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel gd gd-devel GeoIP GeoIP-devel
+sudo yum install -y pcre-devel
+sudo yum install -y openssl-devel
+sudo yum install -y git
+sudo rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+sudo rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+sudo yum --enablerepo=elrepo-kernel install kernel-ml
+sudo grub2-set-default 0
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo reboot

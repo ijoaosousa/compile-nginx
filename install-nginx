@@ -29,3 +29,11 @@ cd /etc/nginx
 sudo wget https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/nginx.zip
 sudo rm -rf nginx.conf
 sudo unzip nginx.zip
+sudo ln -s /usr/lib64/nginx/modules /etc/nginx/modules
+sudo useradd --system --home /var/cache/nginx --shell /sbin/nologin --comment "nginx user" --user-group nginx
+sudo mkdir -p /var/cache/nginx
+sudo nginx -t
+cd /usr/lib/systemd/system/
+sudo curl -o nginx.service -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/nginx.service
+sudo systemctl start nginx.service
+sudo systemctl enable nginx.service

@@ -7,9 +7,9 @@ sudo git clone https://github.com/grahamedgecombe/nginx-ct.git
 sudo git clone https://github.com/google/ngx_brotli.git
 sudo git clone https://github.com/openssl/openssl.git
 sudo git clone https://github.com/kyprizel/testcookie-nginx-module.git
-sudo wget https://ftp.pcre.org/pub/pcre/pcre-8.42.zip
-sudo unzip pcre-8.42.zip
-sudo rm -rf pcre-8.42.zip
+sudo wget https://ftp.pcre.org/pub/pcre/pcre-8.43.zip
+sudo unzip pcre-8.43.zip
+sudo rm -rf pcre-8.43.zip
 sudo wget https://www.zlib.net/zlib-1.2.11.tar.gz
 sudo tar -vzxf zlib-1.2.11.tar.gz
 sudo rm -rf zlib-1.2.11.tar.gz
@@ -25,10 +25,6 @@ sudo mkdir -p /etc/nginx/sites-enabled
 sudo openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 sudo openssl rand 48 > /etc/nginx/ssl/ticket.key
 sudo curl -o /etc/nginx/ssl/lets-encrypt-x3-cross-signed.pem -L https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt
-cd /etc/nginx
-sudo wget https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/nginx.zip
-sudo rm -rf nginx.conf
-sudo unzip nginx.zip
 sudo ln -s /usr/lib64/nginx/modules /etc/nginx/modules
 sudo useradd --system --home /var/cache/nginx --shell /sbin/nologin --comment "nginx user" --user-group nginx
 sudo mkdir -p /var/cache/nginx
@@ -37,5 +33,3 @@ cd /usr/lib/systemd/system/
 sudo curl -o nginx.service -L https://raw.githubusercontent.com/ijoaosousa/install-web-server/master/nginx.service
 sudo systemctl start nginx.service
 sudo systemctl enable nginx.service
-cd /root
-sudo git clone https://github.com/certbot/certbot.git
